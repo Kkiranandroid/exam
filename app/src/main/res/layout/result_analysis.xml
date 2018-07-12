@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/appcolor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:visibility="visible"
+
+            android:id="@+id/resultToolBar"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!--<ImageView
+                android:id="@+id/imageBack"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_back"
+                android:layout_alignParentLeft="true"/>-->
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageBack"
+                android:visibility="visible"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_back_icon_white"/>
+
+            <!--<TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/textViewHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColorDark"
+                android:text="EXAM RESULTS" />-->
+
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/imageViewSearchIcon"
+                android:layout_toStartOf="@+id/imageViewSearchIcon"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:visibility="gone"
+                android:id="@+id/buttonDoneFaq"
+                android:textColor="@color/White"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/textViewHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:text="Exam results"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageBack"
+                android:layout_toEndOf="@+id/imageBack" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/analysistoolBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:paddingTop="10dp"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewBackIcon_timer"
+                    android:visibility="visible"
+                    android:background="@drawable/ic_back_icon_white"/>
+
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+
+                    android:id="@+id/textViewHeadingAnalysis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/White"
+                    android:text="Exam question" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_marginRight="8dp"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+
+                        android:textColor="@color/White"
+                        android:id="@+id/timerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Taken"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#990033"
+                        android:textStyle="bold"
+                        android:id="@+id/textViewTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:12"/>
+                </LinearLayout>
+                <ImageView
+                    android:visibility="gone"
+                    android:padding="3dp"
+                    android:id="@+id/logoutImageView"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_power_settings_new_3xx"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_all"
+            android:showDividers="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+          <Commmon.Methods.SlidinTabLayoutNew
+              android:id="@+id/resulttab"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:elevation="2dp">
+              </Commmon.Methods.SlidinTabLayoutNew>
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pagerResult"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+
+</LinearLayout>

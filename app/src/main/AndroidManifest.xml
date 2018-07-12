@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eniversity.app"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="eniversity.com.MyApplication"
+        android:largeHeap="true"
+        android:allowBackup="false"
+        android:icon="@drawable/eniversity"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/myAppTheme"
+
+       >
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+  <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="eniversity.com.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.MainActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.BrowseCatalogClass"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.ExploreClass"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.CourseList"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="login.page.LoginMainPage"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.RegistrationClass"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.LoginClass"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.ToppersClass"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.ToppersList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="login.page.SeeAllDetails"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="login.page.RecommendedSeeAll"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="eniversity.com.Questions"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:theme="@style/myAppTheme"
+            android:name="eniversity.com.CorseInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="eniversity.com.FrequentlyAskQuesionsClass"
+            android:label="title_activity_frequently_ask_quesions_class"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="eniversity.com.AddFAQClass"
+            android:label="title_activity_add_faqclass"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="eniversity.com.About"
+            android:label="@string/title_activity_about"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="eniversity.com.Contact_us"
+            android:label="@string/title_activity_contact_us"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity android:name="eniversity.com.WebViewActivity"
+            android:label="@string/title_activity_googleplus"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity android:name="eniversity.com.ProceedToPay"
+            android:label="@string/title_activity_googleplus"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity android:name="eniversity.com.CourseDetails"
+            android:label="@string/title_activity_googleplus"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity android:name="eniversity.com.SubDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name="eniversity.com.Result_Analysis"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name="eniversity.com.CategoryList"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name="eniversity.com.EditRecommendedCourses"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="eniversity.com.SubScription"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

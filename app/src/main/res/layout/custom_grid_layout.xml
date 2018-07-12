@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_all"
+
+   >
+
+   <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">-->
+
+
+        <LinearLayout
+            android:background="@color/White"
+
+            android:id="@+id/linearLayoutCouesrDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:maxHeight="180dp"
+android:adjustViewBounds="true"
+                    android:id="@+id/imageViewExploreCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/image_2"
+               />
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/textViewCourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingTop="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="PMP"
+                android:lines="1"
+                android:textSize="18sp" />
+
+
+<!--            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textViewrupee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/rupees"
+                        android:textColor="@color/appcolor"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewCoursePrice"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.2670"
+                    android:textColor="@color/appcolor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+
+                </LinearLayout>
+                    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewCourseUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12sp"
+                    android:text="6384 Users"
+                    android:textColor="@color/Gray"
+                    android:textStyle="bold" />
+            <RatingBar
+              android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/ratingBarProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="0.25"
+                android:progressDrawable="@drawable/custom_ratingbar"
+                />
+            </RelativeLayout>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutprice"
+                    android:paddingLeft="3dp"
+                    android:layout_marginLeft="6dp"
+
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textViewrupee"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupees"
+
+
+                        android:textStyle="bold"
+
+
+
+                        android:textColor="@color/appcolor"
+                        />
+                    <TextView
+
+                        android:id="@+id/textViewCoursePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                        android:text="2670"
+
+                        android:textColor="@color/appcolor"
+
+                        android:textStyle="bold" />
+
+
+
+
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/layoutprice"
+
+                    android:id="@+id/userslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textviewuserName"
+
+
+
+                      android:layout_toLeftOf="@+id/textViewCourseUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+
+                        android:layout_marginLeft="5dp"
+
+                        android:text="Users"
+                        android:textColor="@color/Gray"
+                        android:textStyle="bold" />
+                    <TextView
+
+
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/textViewCourseUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:layout_marginRight="10dp"
+
+
+                        android:text="6384"
+                        android:textColor="@color/appcolor"
+                        android:textStyle="bold" />
+
+                <RatingBar
+                    android:layout_marginTop="2dp"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/ratingBarProductDemoExplorenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12.5dp"
+                    android:isIndicator="false"
+                    android:clickable="false"
+                    android:gravity="end|center"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/custom_ratingbar"
+                    android:stepSize="0.25" />
+                <RatingBar
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/ratingBarProductDemoExplorenew"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/ratingBarProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12.5dp"
+                    android:isIndicator="false"
+                    android:clickable="false"
+                    android:gravity="end|center"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/custom_ratingbar"
+                    android:stepSize="0.25" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+<View
+    android:background="@color/background_all"
+    android:layout_width="match_parent"
+    android:layout_height="15dp"/>
+
+
+            </LinearLayout>
+
+
+<!--    </android.support.v7.widget.CardView>-->
+
+
+</FrameLayout>

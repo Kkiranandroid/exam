@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/primaryColor"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <ImageView
+        android:id="@+id/iamgeViewNavigationdrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_action_back"
+        android:tint="@color/White"
+/>
+
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewBackIcon"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:background="@drawable/ic_back_icon_white"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:paddingTop="17dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:text="Eniversity" />
+        <TextView
+
+            android:visibility="gone"
+            android:id="@+id/textViewHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:paddingTop="17dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="30dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/White"
+            android:text="Eniversity" />
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/imageViewSearchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_action_search_white"/>
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Search"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColor="@color/White"
+            android:textColorHint="@color/white"
+            android:theme="@style/MyEditTextTheme"
+            android:layout_toLeftOf="@+id/imageViewSearchIcon"
+            android:layout_toStartOf="@+id/imageViewSearchIcon"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:visibility="gone"
+            android:id="@+id/buttonDoneFaq"
+            android:textColor="@color/White"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

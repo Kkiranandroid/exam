@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+android:background="@color/White"
+
+    android:orientation="vertical">
+
+   <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">-->
+
+        <LinearLayout
+          android:background="@color/background_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+             android:background="@color/White"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:maxHeight="180dp"
+                android:background="@color/White"
+                android:id="@+id/imageViewExploreCourse"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/image_2"
+                android:adjustViewBounds="true"
+              />
+                <RelativeLayout
+                    android:layout_marginBottom="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+            <TextView
+                android:background="@color/White"
+                android:id="@+id/textViewCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingTop="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:singleLine="true"
+                android:text="PMP"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+                    <RelativeLayout
+
+                        android:id="@+id/linearlayoutPrice"
+                        android:layout_below="@+id/textViewCourseName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewCoursePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/rupees"
+                    android:textColor="@color/appcolor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+                    </RelativeLayout>
+
+<!--<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">-->
+
+<!--
+</RelativeLayout>-->
+                    <RelativeLayout
+
+                        android:layout_below="@+id/linearlayoutPrice"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+            <RatingBar
+                android:layout_marginTop="2dp"
+
+
+
+                android:layout_marginRight="3dp"
+
+                android:id="@+id/ratingBarProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+
+                android:layout_marginLeft="9dp"
+                android:numStars="5"
+                android:progressDrawable="@drawable/custom_ratingbar"
+                android:saveEnabled="false"
+                android:stepSize="0.25" />
+                    <LinearLayout
+
+
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="9dp">
+                        <TextView
+                            android:id="@+id/textViewUsers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Users"
+                            android:textColor="@color/Gray"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_marginLeft="7dp"
+                            android:id="@+id/textViewCourseUsers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="63"
+                            android:textColor="@color/appcolor"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/background_all"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </LinearLayout>
+    <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RatingBar
+
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:progressDrawable="@drawable/user_ratings"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:saveEnabled="false"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:hint="Feedback"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:textStyle="bold"
+                android:textColor="@color/appcolor"
+                android:background="@color/background_button"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <include layout="@layout/tool_action_bar"></include>
+
+
+        <android.support.v4.widget.DrawerLayout
+            android:background="@color/White"
+            android:id="@+id/drawer_layout_Users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutsuscbribed"
+                    android:layout_width="match_parent"
+                    android:background="@color/background_all"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:background="@color/background_all"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Your Subscribed Courses"
+                                android:textColor="@color/cardview_dark_background"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/textViewSeeAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"
+                                android:text="@string/underline"
+                                android:textColor="@color/appcolor"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+
+
+
+                        <LinearLayout
+                            android:background="@color/background_all"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Commmon.Methods.StretchedListView
+                                android:id="@+id/stretchedListviewSubscribedScourse"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                ></Commmon.Methods.StretchedListView>
+
+                            <TextView
+                                android:id="@+id/textViewVisibilityNoCourseFound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="30dp"
+                                android:gravity="center"
+                                android:text="No Record Found"
+                                android:visibility="gone"
+                                android:textColor="@color/Gray" />
+
+
+                            <RelativeLayout
+                                android:layout_marginTop="6dp"
+                                android:background="@color/background_all"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:id="@+id/textViewrecommended"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="Recommended Courses "
+                                    android:textColor="@color/cardview_dark_background"
+                                    android:textSize="18sp" />
+
+
+                                <TextView
+                                    android:id="@+id/recoomendedSeeAll"
+                                    style="text-decoration: underline;"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="3dp"
+                                    android:text="@string/underline"
+                                    android:textColor="@color/appcolor"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/textViewVisibilityNoRecommendedCourseFound"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="30dp"
+                                    android:gravity="center"
+                                    android:text="No Record Found"
+                                    android:visibility="gone"
+                                    android:textColor="@color/Gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:background="@color/White"
+                                    android:id="@+id/linearlayoutRecommendedCourses"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/White"
+                                        android:orientation="horizontal"
+                                        >
+
+                                        <LinearLayout
+                                            android:id="@+id/layoutRecommended"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/White"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone"
+                                            android:weightSum="1"
+                                            >
+                                            <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/card_view"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight="0.5"
+                                                app:cardCornerRadius="2dp"
+                                                app:cardElevation="2dp"
+
+                                                app:cardPreventCornerOverlap="false"
+                                                app:contentPadding="0dp">-->
+
+
+                                            <LinearLayout
+                                                android:background="@drawable/cardview_border"
+                                                android:layout_margin="10dp"
+                                                android:layout_weight="0.5"
+                                                android:id="@+id/linearLayoutCouesrDetails"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:weightSum="1">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+
+                                                        android:layout_marginRight="1dp"
+                                                        android:layout_marginLeft="1dp"
+                                                        android:maxHeight="81dp"
+                                                        android:adjustViewBounds="true"
+                                                        android:id="@+id/imageViewExploreCourse"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="81dp"
+
+
+
+
+
+
+                                                        />
+                                                </LinearLayout>
+
+
+                                                <TextView
+                                                    android:id="@+id/textViewCourseName"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:layout_marginTop="2dp"
+
+                                                    android:ellipsize="end"
+                                                    android:gravity="left"
+                                                    android:lines="1"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="5dp"
+                                                    android:singleLine="true"
+                                                    android:text="PMP"
+                                                    android:textColor="@color/Black"
+                                                    android:textSize="16sp" />
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:paddingLeft="2dp">
+
+
+                                                    <TextView
+                                                        android:id="@+id/textViewCoursePrice"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_centerVertical="true"
+
+                                                        android:paddingLeft="3dp"
+                                                        android:paddingRight="3dp"
+
+
+                                                        android:text="Rs.2670"
+                                                        android:textColor="@color/appcolor"
+                                                        android:textSize="12sp"
+                                                        android:textStyle="bold" />
+
+
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+
+
+                                                        android:orientation="horizontal">
+
+                                                        <TextView
+
+                                                            android:id="@+id/textViewCourseUsers"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentLeft="true"
+
+                                                            android:paddingLeft="3dp"
+
+                                                            android:text="6384 Users"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="12sp"
+                                                            android:textStyle="bold" />
+
+
+                                                    </RelativeLayout>
+                                                    <RatingBar
+                                                        android:layout_marginTop="3dp"
+                                                        android:id="@+id/ratingBarProduct"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="12dp"
+
+                                                        android:layout_marginBottom="6dp"
+                                                        android:layout_marginLeft="3dp"
+
+
+                                                        android:clickable="false"
+                                                        android:isIndicator="false"
+                                                        android:numStars="5"
+                                                        android:progressDrawable="@drawable/custom_ratingbar"
+                                                        android:stepSize="0.25" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                            <!--  </android.support.v7.widget.CardView>-->
+
+
+                                            <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/card_viewNew"
+
+                                                 android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_margin="5dp"
+                                                 android:layout_weight="0.5"
+
+                                                 app:cardCornerRadius="2dp"
+                                                 app:cardElevation="2dp"
+                                                 app:cardPreventCornerOverlap="false"
+                                                 app:contentPadding="0dp">-->
+
+
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:background="@drawable/cardview_border"
+                                                android:layout_weight="0.5"
+                                                android:id="@+id/linearLayoutCouesrDetailsNew"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:weightSum="1">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+
+                                                        android:layout_marginRight="1dp"
+                                                        android:layout_marginLeft="1dp"
+                                                        android:maxHeight="81dp"
+                                                        android:adjustViewBounds="true"
+                                                        android:id="@+id/imageViewExploreCourseNew"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="81dp"
+
+
+
+
+                                                        />
+                                                </LinearLayout>
+
+
+                                                <TextView
+                                                    android:id="@+id/textViewCourseNameNew"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:layout_gravity="left"
+
+                                                    android:layout_marginTop="2dp"
+                                                    android:ellipsize="end"
+                                                    android:gravity="left"
+                                                    android:lines="1"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="5dp"
+                                                    android:singleLine="true"
+                                                    android:text="PMP"
+                                                    android:textColor="@color/Black"
+                                                    android:textSize="16sp" />
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    >
+
+                                                    <!--<LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginRight="2dp"
+
+                                                        android:orientation="horizontal">-->
+
+                                                    <TextView
+                                                        android:id="@+id/textViewCoursePriceNew"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_centerVertical="true"
+                                                        android:paddingLeft="3dp"
+                                                        android:paddingRight="3dp"
+                                                        android:paddingTop="3dp"
+
+
+                                                        android:text="Rs.2670"
+                                                        android:textColor="@color/appcolor"
+                                                        android:textSize="12sp"
+                                                        android:textStyle="bold" />
+
+
+                                                    <!--   </LinearLayout>-->
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content">
+
+                                                        <TextView
+                                                            android:id="@+id/textViewCourseUsersNew"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentLeft="true"
+                                                            android:paddingLeft="3dp"
+
+                                                            android:text="6384 Users"
+
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="12sp"
+                                                            android:textStyle="bold" />
+
+
+                                                    </RelativeLayout>
+                                                    <RatingBar
+                                                        android:layout_marginTop="3dp"
+                                                        android:layout_marginBottom="6dp"
+                                                        android:layout_marginLeft="3dp"
+
+                                                        android:id="@+id/ratingBarProductNew"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="12dp"
+                                                        android:layout_marginRight="3dp"
+                                                        android:clickable="false"
+                                                        android:isIndicator="false"
+                                                        android:numStars="5"
+
+                                                        android:progressDrawable="@drawable/custom_ratingbar"
+                                                        android:stepSize="0.25" />
+
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+                                            <!--       </android.support.v7.widget.CardView>-->
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/White"
+                                        android:orientation="horizontal"
+
+
+                                        >
+
+                                        <LinearLayout
+                                            android:id="@+id/layoutRecommended2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/White"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone"
+                                            android:weightSum="1"
+
+                                            >
+
+
+                                            <!--  <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                  android:id="@+id/card_view2"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_margin="5dp"
+                                                  android:layout_weight="0.5"
+                                                  app:cardCornerRadius="2dp"
+                                                  app:cardElevation="2dp"
+
+                                                  app:cardPreventCornerOverlap="false"
+                                                  app:contentPadding="0dp">
+      -->
+
+                                            <LinearLayout
+                                                android:background="@drawable/cardview_border"
+                                                android:layout_margin="10dp"
+                                                android:layout_weight="0.5"
+                                                android:id="@+id/linearLayoutCouesrDetails2"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical"
+                                                android:weightSum="1">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+
+
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+
+
+                                                        android:layout_marginRight="1dp"
+                                                        android:layout_marginLeft="1dp"
+                                                        android:maxHeight="81dp"
+
+                                                        android:adjustViewBounds="true"
+                                                        android:id="@+id/imageViewExploreCourse2"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="81dp"
+
+
+
+
+
+                                                        />
+                                                </LinearLayout>
+
+
+                                                <TextView
+                                                    android:id="@+id/textViewCourseName2"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+
+                                                    android:layout_marginTop="2dp"
+                                                    android:ellipsize="end"
+                                                    android:gravity="left"
+                                                    android:lines="1"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="5dp"
+                                                    android:singleLine="true"
+                                                    android:text="PMP"
+                                                    android:textColor="@color/Black"
+                                                    android:textSize="16sp" />
+
+
+                                                <LinearLayout
+                                                    android:id="@+id/linearLayoutCouesrDetails3"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:paddingLeft="2dp">
+
+                                                    <!-- <LinearLayout
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:layout_marginRight="2dp"
+
+                                                         android:orientation="horizontal">-->
+
+                                                    <TextView
+                                                        android:id="@+id/textViewCoursePrice2"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_centerVertical="true"
+                                                        android:paddingLeft="3dp"
+                                                        android:paddingRight="3dp"
+                                                        android:paddingTop="3dp"
+
+                                                        android:text="Rs.2670"
+                                                        android:textColor="@color/appcolor"
+                                                        android:textSize="12sp"
+                                                        android:textStyle="bold" />
+
+
+                                                    <!-- </LinearLayout>-->
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content">
+
+                                                        <TextView
+                                                            android:id="@+id/textViewCourseUsers2"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentLeft="true"
+
+
+
+                                                            android:paddingLeft="3dp"
+
+
+                                                            android:text="6384 Users"
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="12sp"
+                                                            android:textStyle="bold" />
+
+
+                                                    </RelativeLayout>
+                                                    <RatingBar
+
+                                                        android:id="@+id/ratingBarProduct2"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="12dp"
+                                                        android:layout_alignParentRight="true"
+
+                                                        android:layout_marginTop="3dp"
+                                                        android:layout_marginBottom="6dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:clickable="false"
+                                                        android:isIndicator="false"
+                                                        android:numStars="5"
+                                                        android:progressDrawable="@drawable/custom_ratingbar"
+                                                        android:stepSize="0.25" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                            <!--   </android.support.v7.widget.CardView>-->
+
+
+                                            <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/card_viewNew3"
+
+                                                 android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_margin="5dp"
+                                                 android:layout_weight="0.5"
+
+                                                 app:cardCornerRadius="2dp"
+                                                 app:cardElevation="2dp"
+                                                 app:cardPreventCornerOverlap="false"
+                                                 app:contentPadding="0dp">-->
+
+
+                                            <LinearLayout
+                                                android:background="@drawable/cardview_border"
+                                                android:layout_margin="10dp"
+                                                android:layout_weight="0.5"
+                                                android:id="@+id/linearLayoutCouesrDetailsNew3"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical"
+                                                android:weightSum="1">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+
+                                                        android:layout_marginRight="1dp"
+                                                        android:layout_marginLeft="1dp"
+                                                        android:maxHeight="81dp"
+
+                                                        android:id="@+id/imageViewExploreCourseNew3"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="81dp"
+
+                                                        android:adjustViewBounds="true"
+
+
+                                                        />
+                                                </LinearLayout>
+
+
+                                                <TextView
+                                                    android:id="@+id/textViewCourseNameNew3"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:layout_marginTop="2dp"
+                                                    android:ellipsize="end"
+                                                    android:gravity="left"
+                                                    android:lines="1"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="5dp"
+                                                    android:singleLine="true"
+                                                    android:text="PMP"
+                                                    android:textColor="@color/Black"
+                                                    android:textSize="16sp" />
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:paddingLeft="2dp">
+
+                                                    <!-- <LinearLayout
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:layout_marginRight="2dp"
+
+                                                         android:orientation="horizontal">-->
+
+                                                    <TextView
+                                                        android:id="@+id/textViewCoursePriceNew3"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_centerVertical="true"
+
+                                                        android:paddingLeft="3dp"
+                                                        android:paddingRight="3dp"
+                                                        android:paddingTop="3dp"
+
+                                                        android:text="Rs.2670"
+                                                        android:textColor="@color/appcolor"
+                                                        android:textSize="12sp"
+                                                        android:textStyle="bold" />
+
+
+                                                    <!--   </LinearLayout>-->
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content">
+
+                                                        <TextView
+                                                            android:id="@+id/textViewCourseUsersNew3"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentLeft="true"
+
+
+                                                            android:paddingLeft="3dp"
+                                                            android:text="6384 Users"
+
+                                                            android:textColor="@color/Gray"
+                                                            android:textSize="12sp"
+                                                            android:textStyle="bold" />
+
+
+
+                                                    </RelativeLayout>
+                                                    <RatingBar
+                                                        android:id="@+id/ratingBarProductNew3"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="12dp"
+                                                        android:layout_marginTop="3dp"
+                                                        android:layout_marginBottom="6dp"
+                                                        android:layout_marginLeft="3dp"
+                                                        android:layout_alignParentRight="true"
+
+                                                        android:clickable="false"
+                                                        android:isIndicator="false"
+                                                        android:numStars="5"
+                                                        android:progressDrawable="@drawable/custom_ratingbar"
+                                                        android:stepSize="0.25" />
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+                                            <!--        </android.support.v7.widget.CardView>-->
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--   <ProgressBar
+                           android:id="@+id/progressbarLoadLandingDetails"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+
+                           android:layout_centerHorizontal="true"/>-->
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressbarLoadLandingDetails"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDrawer"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:choiceMode="singleChoice"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/includelayoutnavigationDrawer"
+                    layout="@layout/navigatin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:clickable="true" />
+            </LinearLayout>
+        </android.support.v4.widget.DrawerLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

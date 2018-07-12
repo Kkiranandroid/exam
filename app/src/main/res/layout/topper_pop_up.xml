@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <include layout="@layout/toolbar"></include>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- <Commmon.Methods.StretchedListView
+                     android:id="@+id/stretchedListViewLoadAllViewPager"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"></Commmon.Methods.StretchedListView>-->
+
+                <ListView
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listViewCourseList"
+                    android:layout_centerHorizontal="true"
+                    android:divider="#dfd9d9"
+                    android:dividerHeight="0.5dp"
+                    android:background="@color/White"/>
+                    <!--android:divider="#dfd9d9"-->
+
+                <ProgressBar
+                    android:id="@+id/progressbarPopupCourselist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateDrawable="@drawable/progress"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

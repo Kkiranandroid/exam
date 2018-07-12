@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/ProgressBarLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="300dp"
+                android:layout_marginLeft="150dp"
+
+                />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar"></include>
+            <TextView
+                android:background="@color/White"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:textColor="@color/primaryColorDark"
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="course Name"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#D1D1D1"/>
+
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ralativeLayoutEasy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Easy"
+
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/basicfeesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="50000.00"
+                        android:textSize="17dp" />
+
+                    <CheckBox
+
+                        android:id="@+id/easyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio_cheked_state"
+
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/easyLayot"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                    android:text="Subscribed on: "
+                        android:textColor="@color/DarkGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/easySubscribedOn"
+                        android:text="13-jul-2016"
+                        android:textStyle="bold"
+                        android:textColor="@color/appcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+               <!-- <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_all"></View>-->
+
+
+                <RelativeLayout
+                    android:id="@+id/ralativeLayoutIntermadiate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                   >
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Intermediate"
+
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/inermediatefeesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:text="50000.00"
+                        android:textSize="17dp" />
+
+                    <CheckBox
+                        android:id="@+id/intermediateCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radio_cheked_state"
+
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/intermediateLayout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Subscribed on: "
+                        android:textColor="@color/DarkGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/intermediateSubscribedOn"
+                        android:text="13-jul-2016"
+                        android:textStyle="bold"
+                        android:textColor="@color/appcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+             <!--   <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_all"></View>-->
+
+                <RelativeLayout
+                    android:id="@+id/ralativeLayoutAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                   >
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Advanced"
+
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/advancedfeesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:text="50000.00"
+                        android:textSize="17dp" />
+
+                    <CheckBox
+                        android:id="@+id/advancedCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radio_cheked_state"
+
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/advancedLayout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Subscribed on: "
+                        android:textColor="@color/DarkGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/advancedSubscribedOn"
+                        android:text="13-jul-2016"
+                        android:textStyle="bold"
+                        android:textColor="@color/appcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#D1D1D1"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/White"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="right"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/linearLayout2"
+                    android:layout_toStartOf="@+id/linearLayout2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+
+                        android:text="Sub Total: "
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Tax: "
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Total:"
+                        android:textSize="15dp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+
+                        android:id="@+id/subtotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/taxTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textSize="15dp" />
+
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/totalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:textColor="@color/appcolor"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+            </ScrollView>
+            <Button
+
+android:layout_alignParentBottom="true"
+                android:id="@+id/payButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_button"
+                android:text="Proceed To PAY"
+                android:textStyle="bold"
+                android:textColor="@color/appcolor" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

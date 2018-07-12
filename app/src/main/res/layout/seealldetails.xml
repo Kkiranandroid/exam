@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background_all">
+
+    <include layout="@layout/browse_tool"
+        />
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+           android:layout_marginLeft="10dp"
+            android:text="Your Subscribed Courses"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>-->
+    <View
+        android:background="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListViewSubscriber"
+            android:background="@color/White"
+            android:divider="@color/background_all"
+            android:dividerHeight="15dp">
+
+        </ListView>
+        <TextView
+            android:id="@+id/textViewNoRecordFoundseeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Record Found"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <ProgressBar
+            android:id="@+id/progressbarLoadLandingDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

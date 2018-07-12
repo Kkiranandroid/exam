@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_all">
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_above="@+id/buttonSelected"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/MainLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/selectCatTextView"
+                    android:layout_marginTop="10dp"
+
+                    android:padding="3dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/Gray"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="3dp"
+                    android:text="Please Select Your Preferred Categories"/>
+                <View
+                    android:background="@color/background_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+
+                <ListView
+                    android:id="@+id/categoryListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+        <Button
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:id="@+id/buttonSelected"
+            android:text="OK"
+            android:textStyle="bold"
+            android:textColor="@color/appcolor"
+            android:background="@color/background_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+
+            android:id="@+id/progressBarCategory"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <include
+            android:visibility="gone"
+            android:id="@+id/includelayoutnavigationDrawer"
+            layout="@layout/navigatin"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

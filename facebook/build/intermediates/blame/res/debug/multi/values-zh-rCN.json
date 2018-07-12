@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "E:\\soumya-workspace\\Eniversity(01-08-2017)\\OnlinExam_latest\\facebook\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "E:\\soumya-workspace\\Eniversity(01-08-2017)\\OnlinExam_latest\\facebook\\res\\values-zh-rCN\\messenger_button_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 2,
+                        "startOffset": 1164,
+                        "endColumn": 55,
+                        "endOffset": 1217
+                    }
+                }
+            }
+        ]
+    }
+]

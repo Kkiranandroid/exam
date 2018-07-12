@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+        <include layout="@layout/tool_action_bar"></include>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout_Users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/LightGray">
+
+
+                    <TextView
+                        android:id="@+id/textViewManage"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:layout_marginLeft="5dp"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="Project management"
+                        android:textColor="@color/cardview_dark_background"
+
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textViewChangeCourse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/underlinechangecourse"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White">
+
+
+                    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <TextView
+                        android:id="@+id/textViewNoRecordFound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="No Record Found"
+                        android:textColor="@color/Gray"
+                        android:visibility="gone" />
+
+                    <ListView
+                        android:id="@+id/listviewTopperList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/LightGray"
+                        android:dividerHeight="1dp"
+                        android:layout_alignParentTop="true"
+                        android:visibility="visible" />
+                    <ProgressBar
+                        android:id="@+id/progressbarTopperClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:indeterminateDrawable="@drawable/progress" />
+                    <ProgressBar
+                        android:id="@+id/progressbarMoreTopperClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:indeterminateDrawable="@drawable/progress"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDrawer"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:choiceMode="singleChoice"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/includelayoutnavigationDrawer"
+                    layout="@layout/navigatin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:clickable="true" />
+            </LinearLayout>
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbarresult"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/primaryColor"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+
+        android:id="@+id/resultToolBar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageBack"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_icon_white"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:text="Exam results" />
+
+
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/imageViewSearchIcon"
+            android:layout_toStartOf="@+id/imageViewSearchIcon"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:visibility="gone"
+            android:id="@+id/buttonDoneFaq"
+            android:textColor="@color/White"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/analysistoolBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:paddingTop="10dp"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewBackIcon_timer"
+                    android:visibility="visible"
+                    android:background="@drawable/ic_action_back"/>
+
+
+
+                <TextView
+                    android:layout_gravity="center"
+
+                    android:id="@+id/textViewHeadingAnalysis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/White"
+                    android:text="Exam question" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/logoutImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+
+                        android:textColor="@color/Gray"
+                        android:id="@+id/timerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Taken"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#990033"
+                        android:textStyle="bold"
+                        android:id="@+id/textViewTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:12"/>
+                </LinearLayout>
+                <ImageView
+                    android:padding="3dp"
+                    android:id="@+id/logoutImageView"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_power_settings_new_3xx"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>

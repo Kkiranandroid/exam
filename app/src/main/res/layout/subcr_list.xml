@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/White">
+        <include layout="@layout/toolbar"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/MainLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/selectCatTextView"
+                            android:layout_marginTop="10dp"
+
+                            android:padding="3dp"
+                            android:textSize="17sp"
+                            android:textColor="@color/Gray"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="3dp"
+                            android:text="Your Subscriptions"/>
+                        <View
+                            android:background="@color/background_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"/>
+
+                        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/swipe_refresh_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <ListView
+                            android:divider="@color/background_all"
+                            android:dividerHeight="1.5dp"
+
+                            android:id="@+id/subscriptionListView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </ListView>
+                        </android.support.v4.widget.SwipeRefreshLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+           <!-- </ScrollView>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/Gray"
+                android:visibility="gone"
+                android:id="@+id/textViewSubNorecFound"
+                android:text="No Subscriptions Found"/>
+            <ProgressBar
+                android:id="@+id/progressbarLoadMoreCoursepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <ProgressBar
+
+                android:id="@+id/progressbarLoadMoreCourse"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

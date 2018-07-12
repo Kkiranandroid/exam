@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mainLayoutQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_all"
+        android:orientation="vertical">
+
+        <include layout="@layout/question_timer_toolbar"></include>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressbarLoadQuesions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutExam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/NoQuestionsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="Questions are not yet generated"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/examsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TabHost
+                            android:id="@android:id/tabhost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/linear3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <HorizontalScrollView
+                                    android:id="@+id/horizontalScrollView1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fillViewport="true"
+                                    android:scrollbars="none"
+                                    android:tabStripEnabled="false">
+
+                                    <TabWidget
+                                        android:id="@android:id/tabs"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:background="@color/White"
+                                        android:orientation="horizontal"
+                                        android:tabStripEnabled="false"
+                                        android:textAlignment="center"/>
+                                </HorizontalScrollView>
+
+                                <FrameLayout
+                                    android:id="@android:id/tabcontent"
+                                    android:layout_width="0dp"
+                                    android:layout_height="10dp"/>
+
+
+                                <Commmon.Methods.MyViewPager
+                                    android:id="@+id/questionsViewPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/White"
+                                    android:visibility="gone">
+
+                                </Commmon.Methods.MyViewPager>
+
+                                <Commmon.Methods.MyViewPager
+                                    android:id="@+id/questionsViewPager2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/White"
+                                    android:visibility="gone">
+                                </Commmon.Methods.MyViewPager>
+
+
+                            </LinearLayout>
+
+                        </TabHost>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/nextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/background_shade"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="3dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:src="@drawable/arrow_right" />
+
+                        <ImageView
+                            android:id="@+id/previousButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/background_shade"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:src="@drawable/arrow_left" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

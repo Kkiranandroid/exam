@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/White"
+
+    android:orientation="vertical">
+
+    <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_view"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_margin="5dp"
+         android:layout_weight="1"
+
+         app:cardCornerRadius="2dp"
+         app:cardElevation="2dp"
+
+         app:cardPreventCornerOverlap="false"
+         app:contentPadding="0dp">-->
+
+    <LinearLayout
+        android:background="@color/background_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:maxHeight="180dp"
+                android:background="@color/White"
+                android:id="@+id/imageViewsubscribeOne"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/image_2"
+                android:adjustViewBounds="true"
+                />
+
+
+            <TextView
+                android:background="@color/White"
+                android:id="@+id/textViewSubscribedScoursename"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingTop="3dp"
+                android:paddingLeft="3dp"
+                android:singleLine="true"
+
+                android:text="PMP"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+
+                    android:text="Rank: "
+                    android:textColor="@color/textDarkQuoteColor" />
+                <TextView
+                    android:id="@+id/textViewSubscribedScourseRank"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+
+                    android:text="6"
+                    android:textColor="@color/appcolor"
+
+
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingLeft="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                 >
+
+                    <TextView
+                        android:id="@+id/textViewUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+
+
+                        android:text="Subscribed on: "
+                        android:textColor="@color/primaryColorDark"
+                       />
+
+                    <TextView
+
+                        android:id="@+id/textViewSubscribedScourseDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="07-Apr-2017"
+                        android:textColor="@color/appcolor"
+                         />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/textViewSubscribedScoursePercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:text="76"
+                android:textColor="@color/Red"
+                android:textSize="16dp"
+                android:visibility="gone"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>
+
+
+
+
+
+
+

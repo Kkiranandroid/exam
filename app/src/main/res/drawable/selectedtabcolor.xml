@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@color/appcolor"/>
+</selector>
+
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-10dp" android:left="-10dp" android:right="-10dp">
+        <shape>
+            <solid android:color="@color/appcolor"/>
+            <stroke android:color="@color/tab_underline" android:width="10dp"/>
+        </shape>
+    </item>
+</layer-list>-->

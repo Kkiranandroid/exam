@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/tool_action_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_all">
+        <LinearLayout
+            android:background="@color/White"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GK for std V "
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_toLeftOf="@+id/numOfAttemptsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attempt: "/>
+                <TextView
+
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/numOfAttemptsTextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="#990033"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/examlevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ExamLevel: "/>
+                <TextView
+                    android:id="@+id/examLevelTextView"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/examlevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy "/>
+                <TextView
+
+                    android:layout_toLeftOf="@+id/lastattemptedOnTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last: "/>
+                <TextView
+                    android:textColor="#990033"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/lastattemptedOnTextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 May 2016 "/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_all"/>
+        <LinearLayout
+            android:background="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:textSize="25sp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear1"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/CorrectPerTextView"
+                    android:textSize="30sp"
+                    android:textColor="#00b300"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"/>
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/correctNumTextView"
+                        android:text="5"
+                        android:gravity="center"
+                        android:textColor="@color/White"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="#00b300"
+                        />
+                    <TextView
+                        android:id="@+id/correct"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correct"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/wrongNumTextView"
+                        android:text="5"
+                        android:gravity="center"
+                        android:textColor="@color/White"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="#B22222"
+                        />
+                    <TextView
+                        android:id="@+id/Incorrect"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Incorrect"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/UnattemptedNumTextView"
+                        android:text="5"
+                        android:gravity="center"
+                        android:textColor="@color/White"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="#ffad33"
+                        />
+                    <TextView
+                        android:id="@+id/notattempted"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unattempted"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_all"/>
+
+        <LinearLayout
+            android:background="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:padding="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RANK"/>
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_toLeftOf="@+id/topperLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textStyle="bold"
+                        android:textColor="#990033"/>
+                    <TextView
+                        android:layout_below="@+id/rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="out of 200"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/topperLogo"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_topper"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_all"/>
+        <Button
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Exams Again"
+            android:background="@color/Green"
+            android:textColor="@color/White"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
